@@ -5,7 +5,7 @@ public class Financeiro {
 	private Pagamento formaPagamento;
 	private double valorTotal;
 	
-	public Financeiro(Pagamento formaPagamento, double valorTotal) {
+	public Financeiro(final Pagamento formaPagamento, final double valorTotal) {
 		super();
 		this.formaPagamento = formaPagamento;
 		this.valorTotal = valorTotal;
@@ -15,7 +15,7 @@ public class Financeiro {
 		return formaPagamento;
 	}
 
-	public void setFormaPagamento(Pagamento formaPagamento) {
+	public void setFormaPagamento(final Pagamento formaPagamento) {
 		this.formaPagamento = formaPagamento;
 	}
 
@@ -23,12 +23,12 @@ public class Financeiro {
 		return valorTotal;
 	}
 
-	public void setValorTotal(double valorTotal) {
+	public void setValorTotal(final double valorTotal) {
 		this.valorTotal = valorTotal;
 	}
 	
-	public void cobrarComissao() {
-		
+	public double cobrarComissao() {
+		return getValorTotal()*COMISSAO;
 	}
 		
 }
